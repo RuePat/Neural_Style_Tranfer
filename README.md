@@ -1,41 +1,45 @@
-# Neural_Style_Tranfer
+# Neural Style Transfer using VGG19
 
-Neural Style Transfer using VGG19
 This repository contains a Python implementation of Neural Style Transfer using the VGG19 model. Neural Style Transfer is a technique to generate an image that combines the content of one image with the style of another image. The VGG19 model is utilized as a feature extractor to separate and capture content and style information from images.
 
-Installation
+## Installation
+
 Make sure you have Python installed along with pip. You can install the required dependencies using the following command:
 
 !pip install torch torchvision matplotlib
 
-Usage
-Load VGG Pretrained Model:
 
-The VGG19 model pretrained on ImageNet is loaded using PyTorch.
+## Usage
 
-Preprocess Image:
+1. **Load VGG Pretrained Model:**
 
-Images are preprocessed to fit the model input requirements. Resize the image to the desired size and apply normalization.
+   The VGG19 model pretrained on ImageNet is loaded using PyTorch.
 
-Deprocess Image:
+2. **Preprocess Image:**
 
-Deprocessing involves reverting the processed image back to its original form by undoing the normalization.
+   Images are preprocessed to fit the model input requirements. Resize the image to the desired size and apply normalization.
 
-Get Features:
+3. **Deprocess Image:**
 
-Extract features from the images using the VGG19 model. Features are extracted at specific layers to capture content and style information.
+   Deprocessing involves reverting the processed image back to its original form by undoing the normalization.
 
-Gram Matrix Calculation:
+4. **Get Features:**
 
-Calculate the Gram matrix from the feature maps to represent the style of an image.
+   Extract features from the images using the VGG19 model. Features are extracted at specific layers to capture content and style information.
 
-Loss Functions:
+5. **Gram Matrix Calculation:**
 
-Define content loss and style loss functions to quantify the difference between the generated image and the content image, and the difference between the style of the generated image and the style image, respectively.
+   Calculate the Gram matrix from the feature maps to represent the style of an image.
 
-Training Loop:
+6. **Loss Functions:**
 
-Utilize an optimization algorithm (Adam optimizer) to minimize the total loss, which is a combination of content loss and style loss. Adjust the weights (alpha and beta) to control the contribution of each loss.
+   Define content loss and style loss functions to quantify the difference between the generated image and the content image, and the difference between the style of the generated image and the style image, respectively.
 
-Example
+7. **Training Loop:**
+
+   Utilize an optimization algorithm (Adam optimizer) to minimize the total loss, which is a combination of content loss and style loss. Adjust the weights (`alpha` and `beta`) to control the contribution of each loss.
+
+## Example
+
 An example of Neural Style Transfer is demonstrated by combining the content of one image with the style of another image.
+
